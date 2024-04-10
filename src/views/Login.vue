@@ -47,6 +47,7 @@ async function checkInput() {
 <style scoped>
 .container {
   width: 80%;
+  min-width: 30rem;
   height: 80vh;
   display: flex;
   gap: 2rem;
@@ -63,7 +64,7 @@ async function checkInput() {
   margin-top: 4rem;
 }
 .form {
-  width: 400px;
+  width: 25rem;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -75,6 +76,7 @@ async function checkInput() {
   font-weight: 400;
 }
 .input {
+  width: 100%;
   padding: 0.7rem 1rem;
   border-radius: 0.5rem;
   border: 2px solid #4a4a4a;
