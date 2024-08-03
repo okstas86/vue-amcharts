@@ -49,24 +49,28 @@ const store = createStore({
   },
   actions: {
     handleLogin(context, siteId) {
-      axios
-        .get('https://track-api.leadhit.io/client/test_auth', {
-          headers: {
-            'Api-Key': import.meta.env.VITE_API_KEY,
-            'Leadhit-Site-Id': siteId
-          }
-        })
-        .then((response) => {
-          if (response.data.message === 'ok') {
-            console.log(response.data)
-            router.push('/analytics')
-            context.commit('setLeadhitSiteId', siteId)
-          }
-        })
-        .catch((error) => {
-          console.error('Ошибка при авторизации:', error)
-          this.error = 'Ошибка при авторизации'
-        })
+      router.push('/analytics')
+      context.commit('setLeadhitSiteId', siteId)
+      // console.log(siteId)
+      // console.log(import.meta.env.VITE_API_KEY)
+      // axios
+      //   .get('https://track-api.leadhit.io/client/test_auth', {
+      //     headers: {
+      //       'Api-Key': import.meta.env.VITE_API_KEY,
+      //       'Leadhit-Site-Id': siteId
+      //     }
+      //   })
+      //   .then((response) => {
+      //     if (response.data.message === 'ok') {
+      //       console.log(response.data)
+      //       router.push('/analytics')
+      //       context.commit('setLeadhitSiteId', siteId)
+      //     }
+      //   })
+      //   .catch((error) => {
+      //     console.error('Ошибка при авторизации:', error)
+      //     this.error = 'Ошибка при авторизации'
+      //   })
     }
   }
 })

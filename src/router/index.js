@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Login from '../views/Login.vue'
+import Test from '../views/Test.vue'
+import Tree from '../views/Tree.vue'
 import Analytics from '../views/Analytics.vue'
 
 const router = createRouter({
@@ -7,6 +9,8 @@ const router = createRouter({
   routes: [
     { path: '/', redirect: '/login' },
     { path: '/login', component: Login },
+    { path: '/test', component: Test },
+    { path: '/tree', component: Tree },
     {
       path: '/analytics',
       component: Analytics,

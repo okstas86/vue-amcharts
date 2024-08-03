@@ -27,7 +27,7 @@ const error = ref('')
 function clearError() {
   error.value = ''
 }
-console.log(import.meta.env.VITE_SITE_ID)
+
 async function checkInput() {
   if (siteId.value.length !== 24) {
     error.value = 'id сайта должен содержать 24 символа'
@@ -48,7 +48,7 @@ async function checkInput() {
 .container {
   width: 80%;
   min-width: 30rem;
-  height: 80vh;
+  min-height: 80vh;
   display: flex;
   gap: 2rem;
   flex-direction: column;
